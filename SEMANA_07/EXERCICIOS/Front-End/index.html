@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head id="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz da Programação</title>
+        <link id="style_menu" rel="stylesheet" href="styles.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body id="body">
+        <header class="game_title">
+            <h1 id="title">Quiz da Programação</h1>
+        </header>
+        <div class="menu">
+            <button id="play" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><p>JOGAR</p></button>
+            <button id="rules" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><p>REGRAS</p></button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Regras</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Cada jogador terá a sua vez de jogar. A pergunta estará identificada com o nome.</li>
+                        <li>Não há limite de tempo para responder as perguntas.</li>
+                        <li>Ganha quem acertar mais perguntas ao final do jogo.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Nome dos jogadores</h1>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="fplayer">Jogador 1:</label><br>
+                        <input type="text" id="fplayer" name="fplayer"><br>
+                        <label for="splayer">Jogador 2:</label><br>
+                        <input type="text" id="splayer" name="splayer"><br><br>
+                        <p id="error"></p>
+                      </form> 
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <input id="advance" type="submit" value="Avançar" onclick="getNames()">
+                </div>
+            </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>

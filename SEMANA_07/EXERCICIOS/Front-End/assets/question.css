@@ -1,0 +1,80 @@
+body {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(35,35,175,1) 49%, rgba(0,212,255,1) 100%);
+    overflow: hidden;
+}
+
+li {
+    margin-top: 15px;
+    font-family: fantasy;
+}
+
+.question {
+    margin: 1vh 11vw 0;
+    width: 80vw;
+    justify-content: center;
+    text-align: center;
+    font-family: fantasy;
+    border-radius: 10px;
+    border: 5px solid #e1bc56;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(175,35,35,1) 49%, rgba(255,0,0,1) 100%);
+}
+
+#title {
+    color: #fff;
+    padding: 10px;
+    font-size: 450%;
+}
+
+.menu {
+    margin-top: 100px;
+    height: 65vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#alt1b, #alt2b, #alt3b, #alt4b{
+    width: 25em;
+    border-radius: 10px;
+    border: 5px solid #e1bc56;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(175,35,35,1) 49%, rgba(255,0,0,1) 100%);
+}
+
+#alt1, #alt2, #alt3, #alt4 {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 45px;
+    font-family: fantasy;
+}
+
+#player_question {
+    font-family: fantasy;
+    color: #fff;
+    font-size: 250%;
+    margin-left: 210px;
+    margin-top: 40px;
+}
+
+#error {
+    color:darkred;
+}
+
+@media screen and (max-width: 450px) {
+    .question {
+        font-size: 50%;
+    }
+    #title {
+        margin: 0;
+    }
+    .menu {
+        margin-top: 50px;
+        gap: 40px;
+    }
+    #alt1b, #alt2b, #alt3b, #alt4b {
+        width: 20em;
+    }
+  }
