@@ -9,50 +9,54 @@ li {
     font-family: fantasy;
 }
 
-.game_title {
-    width: 100vw;
+.question {
+    margin: 1vh 11vw 0;
+    width: 80vw;
+    justify-content: center;
     text-align: center;
     font-family: fantasy;
-    color: #e1bc56;
+    border-radius: 10px;
+    border: 5px solid #e1bc56;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(175,35,35,1) 49%, rgba(255,0,0,1) 100%);
 }
 
 #title {
-    margin-top: 100px;
+    color: #fff;
     padding: 10px;
-    font-size: 600%;
+    font-size: 450%;
 }
 
 .menu {
-    margin-top: 170px;
+    margin-top: 40px;
     height: 65vh;
     flex-direction: column;
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 30px;
 }
 
-#play, #rules {
-    width: 20em;
-    height: 100px;
+#alt1b, #alt2b, #alt3b, #alt4b{
+    width: 25em;
     border-radius: 10px;
     border: 5px solid #e1bc56;
     background: rgb(255,0,0);
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(175,35,35,1) 49%, rgba(255,0,0,1) 100%);
 }
 
-#advance {
-    height: 45px;
-    border-radius: 10px;
-    border: 5px solid #e1bc56;
-    background: rgb(255,0,0);
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(175,35,35,1) 49%, rgba(255,0,0,1) 100%);
-}
-
-#play p, #rules p {
+#alt1, #alt2, #alt3, #alt4 {
     color: #fff;
-    margin: 0;
+    margin-bottom: 0;
     font-size: 45px;
     font-family: fantasy;
+}
+
+#player_question {
+    font-family: fantasy;
+    color: #fff;
+    font-size: 250%;
+    margin-left: 210px;
+    margin-top: 20px;
 }
 
 #error {
@@ -60,13 +64,17 @@ li {
 }
 
 @media screen and (max-width: 450px) {
-    .game_title {
-        font-size: 200%;
+    .question {
+        font-size: 50%;
     }
     #title {
         margin: 0;
     }
     .menu {
-        margin-top: 100px;
+        margin-top: 50px;
+        gap: 40px;
+    }
+    #alt1b, #alt2b, #alt3b, #alt4b {
+        width: 20em;
     }
   }

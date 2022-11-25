@@ -4,6 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Quiz da Programação</title>
+        <!-- update the version number as needed -->
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+        <!-- include only the Firebase features as you need -->
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+        <script>
+          // REPLACE WITH YOUR web app's Firebase configuration
+          const firebaseConfig = {
+            apiKey: "AIzaSyC9a6hOfN8LFY2ZNd-sVuKVujd2kHuTfLw",
+            authDomain: "esp-game-2b03d.firebaseapp.com",
+            databaseURL: "https://esp-game-2b03d-default-rtdb.firebaseio.com",
+            projectId: "esp-game-2b03d",
+            storageBucket: "esp-game-2b03d.appspot.com",
+            messagingSenderId: "899111643252",
+            appId: "1:899111643252:web:bd5daeb0ba718c972d8921"
+          };
+
+          // Initialize firebase
+          firebase.initializeApp(firebaseConfig);
+
+          // Make auth and database references
+          const auth = firebase.auth();
+          const db = firebase.database();
+
+        </script>
         <link id="style_menu" rel="stylesheet" href="styles.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     </head>
