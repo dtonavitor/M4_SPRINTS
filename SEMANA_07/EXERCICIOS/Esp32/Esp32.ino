@@ -81,6 +81,21 @@ void streamCallback(FirebaseStream data){
       digitalWrite(buzzer, 1);
       tone(buzzer, 5000, 1100);
     }
+    else if (gpio == "10" && state == 1) {
+      tone(gpio.toInt(),1319,125);
+      delay(130);
+      tone(gpio.toInt(),1568,125);
+      delay(130);
+      tone(gpio.toInt(),2637,125);
+      delay(130);
+      tone(gpio.toInt(),2093,125);
+      delay(130);
+      tone(gpio.toInt(),2349,125);
+      delay(130);
+      tone(gpio.toInt(),3136,125);
+      delay(125);
+      noTone(gpio.toInt());
+    }
   }
 
   /* When it first runs, it is triggered on the root (/) path and returns a JSON with all keys
@@ -127,8 +142,7 @@ void setup(){
 
   // Initialize Outputs
   pinMode(output1, OUTPUT);
-  pinMode(output2, OUTPUT);
-  
+  pinMode(output2, OUTPUT); 
   // Assign the api key (required)
   config.api_key = API_KEY;
 
@@ -157,8 +171,6 @@ void setup(){
 
   // Assign a calback function to run when it detects changes on the database
   Firebase.RTDB.setStreamCallback(&stream, streamCallback, streamTimeoutCallback);
-
-  delay(2000);
 }
 
 void loop(){

@@ -67,9 +67,11 @@ var indexS = 1;
 // Database path for GPIO states
 var dbPathOutput1 = 'board1/outputs/digital/16';
 var dbPathOutput2 = 'board1/outputs/digital/17';
+var dbPathOutput3 = 'board1/outputs/digital/10';
 
 var dbRefOutput1 = firebase.database().ref().child(dbPathOutput1);
 var dbRefOutput2 = firebase.database().ref().child(dbPathOutput2);
+var dbRefOutput3 = firebase.database().ref().child(dbPathOutput3);
 
 function getFinalScreen() {
     let text = '';
@@ -103,12 +105,16 @@ function getFinalScreen() {
         document.querySelector("#pointss").innerHTML = pointsSecondPlayer;
     }
     else {
-        document.querySelector("#result").innerHTML = `Vencedor ${secondPlayer}!`;
+        document.querySelector("#result").innerHTML = `Vencedor: ${secondPlayer}!`;
         document.querySelector("#winner").innerHTML = secondPlayer;
         document.querySelector("#second").innerHTML = firstPlayer;
         document.querySelector("#pointsf").innerHTML = pointsSecondPlayer;
         document.querySelector("#pointss").innerHTML = pointsFirstPlayer; 
     }
+    dbRefOutput3.set(1);
+    setTimeout(function(){
+        dbRefOutput3.set(0);
+    }, 1525)
 }
 
 function question(questionNumber) {
@@ -116,6 +122,7 @@ function question(questionNumber) {
     setTimeout(function(){
         dbRefOutput1.set(0);
         dbRefOutput2.set(0);
+        dbRefOutput3.set(0);
     }, 1000)
     if (questionNumber <= 4) {  
         if (questionNumber % 2 != 0) {
@@ -150,7 +157,7 @@ function question(questionNumber) {
         }
     }
     else {
-        getFinalScreen() 
+        getFinalScreen()
     }
 }
 
