@@ -25,6 +25,6 @@ Link do jogo no firebase: <a href="https://esp-game-2b03d.web.app">https://esp-g
 Link do esquemático e da foto do projeto <a href="https://github.com/dtonavitor/M4_SPRINTS/tree/main/SEMANA_07/EXERCICIOS/assets">https://github.com/dtonavitor/M4_SPRINTS/tree/main/SEMANA_07/EXERCICIOS/assets</a>
 
 Link do código-fonte: <a href="https://github.com/dtonavitor/M4_SPRINTS/tree/main/SEMANA_07/EXERCICIOS/Esp32"> código do esp32 </a>
-<a href="https://github.com/dtonavitor/M4_SPRINTS/tree/main/SEMANA_07/EXERCICIOS/Web%20Server"> código da página web </a>
+<br> <a href="https://github.com/dtonavitor/M4_SPRINTS/tree/main/SEMANA_07/EXERCICIOS/Web%20Server"> código da página web </a>
 
 Link do vídeo: <a href="https://drive.google.com/file/d/1qHv4lY41A4TeIcGnUuG1vekAX1837FIv/view?usp=sharing">https://drive.google.com/file/d/1qHv4lY41A4TeIcGnUuG1vekAX1837FIv/view?usp=sharing</a>
